@@ -3,7 +3,7 @@ package practica2;
 public class ComparaMetodos {
 
     public static void main(String[] args) {
-        int tamaño = 25000;
+        int tamaño = 50000;
         
         DatosEstadisticos de = new DatosEstadisticos();
         int[] vec = GeneraCaso.generaVector(tamaño, false);
@@ -12,8 +12,8 @@ public class ComparaMetodos {
         MediaDatosEstadisticos dem = new MediaDatosEstadisticos(de, tamaño);
         CompruebaCaso.compruebaVector(vec, vec.length);
         
-        System.out.println(a.nombreMetodo());
-        System.out.println("Vector de " + tamaño + " elementos  - " + de.dameTiempo() + " segundos en ordenar.");
+        System.out.println("----- " + a.nombreMetodo() + " -----");
+        System.out.println("Vector de " + tamaño + " elementos - " + de.dameTiempo() + " segundos en ordenar.");
         System.out.println("Movimientos = " + de.dameMovimientos());
         System.out.println("Media de movimientos = " + dem.dameMediaMovimientos());
         System.out.println("Comparaciones = " + de.dameComparaciones());
@@ -23,12 +23,15 @@ public class ComparaMetodos {
         
         System.out.println("\n\n");
         
+        
         de = new DatosEstadisticos();
-        Ordenar2Vector b = new Ordenar2Vector();
+        Ordenar2Vector b = new Ordenar2Vector();        
         vec = GeneraCaso.generaVector(tamaño, false);
         b.ordena(vec, de);
+        dem = new MediaDatosEstadisticos(de, tamaño);
         CompruebaCaso.compruebaVector(vec, vec.length);
-        System.out.println("Vector de " + tamaño + " elementos  - " + de.dameTiempo() + " segundos en ordenar.");
+        System.out.println("----- " + b.nombreMetodo() + " -----");
+        System.out.println("Vector de " + tamaño + " elementos - " + de.dameTiempo() + " segundos en ordenar.");
         System.out.println("Movimientos = " + de.dameMovimientos());
         System.out.println("Media de movimientos = " + dem.dameMediaMovimientos());
         System.out.println("Comparaciones = " + de.dameComparaciones());

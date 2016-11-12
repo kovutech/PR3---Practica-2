@@ -3,8 +3,8 @@ package practica2;
 public class DatosEstadisticos {
 
     private double tiempo;
-    private int comparaciones;
-    private int movimientos;
+    private long comparaciones;
+    private long movimientos;
 
     public DatosEstadisticos() {
         tiempo = 0.0;
@@ -20,19 +20,19 @@ public class DatosEstadisticos {
         movimientos += 1;
     }
 
-    public void estableceComparaciones(int n) {
+    public void estableceComparaciones(long n) {
         comparaciones = n;
     }
 
-    public void estableceMovimientos(int n) {
+    public void estableceMovimientos(long n) {
         movimientos = n;
     }
 
-    public int dameComparaciones() {
+    public long dameComparaciones() {
         return comparaciones;
     }
 
-    public int dameMovimientos() {
+    public long dameMovimientos() {
         return movimientos;
     }
 

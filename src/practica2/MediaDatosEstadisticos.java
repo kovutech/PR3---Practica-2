@@ -21,12 +21,11 @@ public class MediaDatosEstadisticos {
         return datosMedia.dameTiempo() / tamaño;
     }
 
-    public int dameMediaComparaciones() {
-        return datosMedia.dameComparaciones() / tamaño;
+    public double dameMediaComparaciones() {
+        return (double)datosMedia.dameComparaciones() / (double)tamaño;
     }
 
-    public int dameMediaMovimientos() {
-        System.out.println(datosMedia.dameMovimientos() + " - " + tamaño);
-        return datosMedia.dameMovimientos() / tamaño;
+    public double dameMediaMovimientos() {
+        return (double)datosMedia.dameMovimientos() / (double)tamaño;
     }
 }
