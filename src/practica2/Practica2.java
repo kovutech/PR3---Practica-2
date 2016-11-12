@@ -3,11 +3,12 @@ package practica2;
 public class Practica2 {
 
     public static void main(String[] args) {
-        int tamaño = 25000;
+        int tamaño = 25000000;
         DatosEstadisticos de = new DatosEstadisticos();
         int[] vec = GeneraCaso.generaVector(tamaño, false);
         //Ordenar1Vector a = new Ordenar1Vector();
         Ordenar2Vector b = new Ordenar2Vector();
+        System.out.println(b.nombreMetodo());
         b.ordena(vec, de);
         //a.ordena(vec, de);
         CompruebaCaso.compruebaVector(vec, vec.length);
