@@ -28,7 +28,7 @@ public class Ordenar2Vector implements OrdenarVector {
                 while ((p1 < l1) && (p2 < l2)) {
                     de.añadeComparacion();
                     if (vec[p1 - 1] < vec[p2 - 1]) {
-                        vecaux[pla] = vec[p1 - 1];
+                        vecaux[pla-1] = vec[p1 - 1];
                         p1 = p1 + 1;
                     } else {
                         vecaux[pla - 1] = vec[p2 - 1];
